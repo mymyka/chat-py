@@ -23,8 +23,14 @@ def receving():
             break
 
 def main():
-    user_input = input("You: ")
-    client.send(user_input.encode())
+      while True:
+        try:
+            msg = input("You: ")
+            if msg.strip() == "":
+                continue
+            client.send(msg.encode())
+        except:
+            break
 
 
 threading.Thread(target=receving, daemon=True).start()
