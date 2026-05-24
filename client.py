@@ -2,7 +2,7 @@ import socket
 import threading
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(("192.168.1.13",8080))
+client.connect(("localhost",8080))
 
 
 # while True:
